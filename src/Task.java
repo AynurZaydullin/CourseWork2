@@ -4,17 +4,16 @@ public abstract class Task {
     private String title;
     private String description;
     private TaskType taskType;
-    private LocalDateTime firstType;
+    private LocalDateTime firstDate;
     private boolean archived;
     private static Integer counter = 1;
     private final Integer id;
 
-    protected Task(String title, String description, TaskType taskType, LocalDateTime firstType, boolean archived) {
-        this.title = title;
+    protected Task(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
+        setTitle(title);
         this.description = description;
         this.taskType = taskType;
-        this.firstType = firstType;
-        this.archived = archived;
+        this.firstDate = localDateTime;
         this.id = counter++;
     }
 
@@ -30,8 +29,8 @@ public abstract class Task {
         return taskType;
     }
 
-    public LocalDateTime getFirstType() {
-        return firstType;
+    public LocalDateTime getFirstDate() {
+        return firstDate;
     }
 
     public boolean isArchived() {
@@ -47,7 +46,11 @@ public abstract class Task {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if (title == null || title.isEmpty()) {
+            System.out.println("Некорректный ввод.");
+        } else {
+            this.title = title;
+        }
     }
 
     public void setDescription(String description) {
@@ -58,8 +61,8 @@ public abstract class Task {
         this.taskType = taskType;
     }
 
-    public void setFirstType(LocalDateTime firstType) {
-        this.firstType = firstType;
+    public void setFirstType(LocalDateTime firstDate) {
+        this.firstDate = firstDate;
     }
 
     public void setArchived(boolean archived) {
@@ -69,4 +72,6 @@ public abstract class Task {
     public static void setCounter(Integer counter) {
         Task.counter = counter;
     }
+
+    public abstract boolean checkOccurrence(LocalDateTime requestedDate);
 }

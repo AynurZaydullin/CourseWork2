@@ -1,7 +1,12 @@
 import java.time.LocalDateTime;
 
 public class DailyTask extends Task implements Repeatable{
-    protected DailyTask(String title, String description, TaskType taskType, LocalDateTime firstType, boolean archived) {
-        super(title, description, taskType, firstType, archived);
+    protected DailyTask(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
+        super(title, description, taskType, localDateTime);
+    }
+
+    @Override
+    public boolean checkOccurrence(LocalDateTime requestedDate) {
+        return getFirstDate().toLocalDate().equals(requestedDate.toLocalDate());
     }
 }
