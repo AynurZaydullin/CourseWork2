@@ -1,7 +1,7 @@
 import java.io.IOException;
 public class WrongInputException extends IOException {
     private final String message;
-    public TransportTypeException(String message) {
+    public WrongInputException(String message) {
         super();
         this.message = message;
     }

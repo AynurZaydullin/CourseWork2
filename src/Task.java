@@ -9,8 +9,10 @@ public abstract class Task {
     private static Integer counter = 1;
     private final Integer id;
 
+    //Создание задачи через класс.
     protected Task(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
         setTitle(title);
+        this.title = title;
         this.description = description;
         this.taskType = taskType;
         this.firstDate = localDateTime;

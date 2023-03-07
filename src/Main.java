@@ -17,7 +17,7 @@ public class Main {
                             DailyPlanner.editTask();
                             break;
                         case 3:
-                            DailyPlanner.deleteTask();
+                            DailyPlanner.deleteTask(scanner);
                             break;
                         case 4:
                             DailyPlanner.getTaskByGroup();
@@ -47,12 +47,7 @@ public class Main {
 
     private static void printMenu() {
         System.out.println(
-                """
-                        1. Добавить задачу
-                        2. Удалить задачу
-                        3. Получить задачу на указанный день
-                        0. Выход
-                        """
+                "1. Добавить задачу  2. Удалить задачу 3. Получить задачу на указанный день 0. Выход"
         );
     }
 }

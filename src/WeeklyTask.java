@@ -1,8 +1,8 @@
 import java.time.LocalDateTime;
 
 public class WeeklyTask extends Task implements Repeatable{
-    protected WeeklyTask(String title, String description, TaskType taskType, LocalDateTime localDateTime, boolean archived) {
-        super(title, description, taskType, localDateTime, archived);
+    protected WeeklyTask(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
+        super(title, description, taskType, localDateTime);
     }
 
     @Override
