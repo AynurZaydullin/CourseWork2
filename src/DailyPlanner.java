@@ -11,6 +11,7 @@ public class DailyPlanner {
     private static final Map<Integer, Repeatable> actualTask = new HashMap<>();
     private static final Map<Integer, Repeatable> archivedTask = new HashMap<>();
 
+
     public static void addTask(Scanner scanner)   { //throws WrongInputException
 //        try {
             scanner.nextLine();
@@ -85,6 +86,19 @@ public class DailyPlanner {
 //        }
 //    }
 
+//    public static void getTasksByDay(){
+//        System.out.println("Введите дату как dd.MM.yyyy:");
+//        Scanner scanner = new Scanner(System.in);
+//        String date = scanner.next();
+//        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+//        LocalDateTime requestedDate = LocalDateTime.parse(date, dateFormatter);
+//        List<Repeatable> foundEvents = findTasksByDate(requestedDate);
+//        System.out.println("События на " + requestedDate + ":");
+//        for (Repeatable task : foundEvents) {
+//            System.out.println(task);
+//        }
+//
+//    }
     public static void getTaskByGroup() {
     }
 
