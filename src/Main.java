@@ -4,18 +4,28 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        GregorianCalendar cannes = new GregorianCalendar(2023, Calendar.AUGUST, 2, 15, 30);
-        GregorianCalendar sss = new GregorianCalendar(2023, Calendar.AUGUST, 2);
-        DateFormat df = new SimpleDateFormat("dd MMM yyy");
-        String date3 = df.format(cannes.getTime());
-        String date4 = df.format(sss.getTime());
-        System.out.println(date3.equals(date4));
-        System.out.println(cannes.equals(sss));
-        System.out.println(cannes);
-        System.out.println(df.format(cannes.getTime()));
+//        GregorianCalendar cannes = new GregorianCalendar(2023, Calendar.AUGUST, 2, 15, 30);
+//        GregorianCalendar sss = new GregorianCalendar(2023, Calendar.AUGUST, 2);
+//        DateFormat df = new SimpleDateFormat("dd MMM yyy");
+//        String date3 = df.format(cannes.getTime());
+//        String date4 = df.format(sss.getTime());
+//        System.out.println(date3.equals(date4));
+//        System.out.println(cannes.equals(sss));
+//        System.out.println(cannes);
+//        System.out.println(df.format(cannes.getTime()));
+
+        Pattern p = Pattern.compile("^[0-9]+$");
+        Matcher m = p.matcher("1+2");
+        if (m.matches()) {
+            System.out.println("Строка соотвествует шаблону");
+        } else {
+            System.out.println("Не соответствует");
+        }
 //        try (Scanner scanner = new Scanner(System.in)) {
 //            label:
 //            while (true) {

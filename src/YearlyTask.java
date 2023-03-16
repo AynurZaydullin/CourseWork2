@@ -6,7 +6,7 @@ public class YearlyTask extends Task implements Repeatable{
     }
 
     @Override
-    public boolean checkOccurrence(LocalDateTime requestedDate) {
+    public boolean compareParametersOfDate(LocalDateTime requestedDate) {
         return getFirstDate().getYear() == requestedDate.getYear();
     }
 }

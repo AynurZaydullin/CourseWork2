@@ -7,7 +7,7 @@ public class OnceTask extends Task implements Repeatable {
     }
 
     @Override
-    public boolean checkOccurrence(LocalDateTime requestedDate) {
+    public boolean compareParametersOfDate(LocalDateTime requestedDate) {
         return false;
     }
 }

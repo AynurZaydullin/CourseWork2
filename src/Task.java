@@ -75,5 +75,5 @@ public abstract class Task {
         Task.counter = counter;
     }
 
-    public abstract boolean checkOccurrence(LocalDateTime requestedDate);
+    public abstract boolean compareParametersOfDate(LocalDateTime requestedDate);
 }

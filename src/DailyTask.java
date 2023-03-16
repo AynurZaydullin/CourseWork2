@@ -6,7 +6,7 @@ public class DailyTask extends Task implements Repeatable{
     }
 
     @Override
-    public boolean checkOccurrence(LocalDateTime requestedDate) {
+    public boolean compareParametersOfDate(LocalDateTime requestedDate) {
         return getFirstDate().toLocalDate().equals(requestedDate.toLocalDate());
     }
 }

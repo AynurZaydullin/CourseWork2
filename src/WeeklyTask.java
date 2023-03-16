@@ -6,7 +6,7 @@ public class WeeklyTask extends Task implements Repeatable{
     }
 
     @Override
-    public boolean checkOccurrence(LocalDateTime requestedDate) {
+    public boolean compareParametersOfDate(LocalDateTime requestedDate) {
         return getFirstDate().getDayOfWeek().equals(requestedDate.getDayOfWeek());
     }
 }
